@@ -8,8 +8,7 @@ import static org.hamcrest.Matchers.*;
 import org.testng.Assert;
 
 import com.apiautomation.files.payload;
-import com.apiautomation.utilities.ReUsableMethods;
-
+import com.apiautomation.utilities.CommonMethods;
 
 
 public class Basics {
@@ -52,9 +51,10 @@ public class Basics {
 		.queryParam("place_id",placeId)
 		.when().get("maps/api/place/get/json")
 		.then().assertThat().log().all().statusCode(200).extract().response().asString();
-	JsonPath js1=ReUsableMethods.rawToJson(getPlaceResponse);
+	JsonPath js1=CommonMethods.convertRawToJson(getPlaceResponse);
 	String actualAddress =js1.getString("address");
 	System.out.println(actualAddress);
+	Assert.assertEquals(actualAddress, newAddress);
 	Assert.assertEquals(actualAddress, "Pacific ocean");
 	//Cucumber Junit, Testng
 	
