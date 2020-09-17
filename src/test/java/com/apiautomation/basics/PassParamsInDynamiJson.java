@@ -2,6 +2,7 @@ package com.apiautomation.basics;
 
 import org.testng.annotations.Test;
 
+import com.apiautomation.constants.APIConstants;
 import com.apiautomation.files.Payload;
 import com.apiautomation.utilities.CommonMethods;
 
@@ -18,11 +19,11 @@ public class PassParamsInDynamiJson {
 	
 	@Test(priority=1)
 	public void createNewBookUsingDynamicJson() {
-		RestAssured.baseURI = "http://216.10.245.166/";
+		RestAssured.baseURI = APIConstants.BOOK_BASE_URI;
 		
-		String resp = given().log().all().header("Content-Type", "application/json")
+		String resp = given().log().all().header(APIConstants.HEADER_CONTENT_TYPE, APIConstants.HEADER_CONTENT_TYPE_JSON)
 				.body(Payload.addNewBook("Head First Java", "code", "423", "Kathy Sierra"))
-				.put("Library/Addbook.php")
+				.put(APIConstants.ADDBOOK_RESOURCE)
 				.then().assertThat().statusCode(200)
 				.extract().response().asString();
 		System.out.println("Create New Book response:"+resp);
@@ -35,12 +36,12 @@ public class PassParamsInDynamiJson {
 	@Test(priority=2)
 	public void deleteBook() {
 		
-		RestAssured.baseURI = "http://216.10.245.166/";
+		RestAssured.baseURI = APIConstants.BOOK_BASE_URI;
 		
-		String resp = given().log().all().header("Content-Type", "application/json")
+		String resp = given().log().all().header(APIConstants.HEADER_CONTENT_TYPE, APIConstants.HEADER_CONTENT_TYPE_JSON)
 				.body(Payload.deleteBook(book_ID))
-				.post("Library/DeleteBook.php")
-				.then().assertThat().statusCode(200)
+				.post(APIConstants.DELETEBOOK_RESOURCE)
+				.then().assertThat().statusCode(APIConstants.STATUS_CODE_200)
 				.extract().response().asString();
 		System.out.println("Delete Book response:"+resp);
 		
