@@ -8,6 +8,7 @@ public class APIConstants {
 	public static final String ADDBOOK_RESOURCE = "Library/Addbook.php";
 	public static final String DELETEBOOK_RESOURCE = "Library/DeleteBook.php";
 	
+	//Status codes
 	public static final int STATUS_CODE_200 = 200; /* Success Response*/
 	public static final int STATUS_CODE_201 = 201; /* Created record*/
 	public static final int STATUS_CODE_204 = 204; /* Resource deleted successfulluy*/
