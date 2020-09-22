@@ -11,7 +11,7 @@ public class APIConstants {
 	//Status codes
 	public static final int STATUS_CODE_200 = 200; /* Success Response*/
 	public static final int STATUS_CODE_201 = 201; /* Created record*/
-	public static final int STATUS_CODE_204 = 204; /* Resource deleted successfulluy*/
+	public static final int STATUS_CODE_204 = 204; /* Resource deleted successfully*/
 	public static final int STATUS_CODE_400 = 400; /* Bad Request */
 	public static final int STATUS_CODE_404 = 404; /* File Not Found */
 	public static final int STATUS_CODE_500 = 500; /*Internal Server Error*/
