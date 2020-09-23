@@ -1,4 +1,4 @@
-package com.pojo.classes;
+package com.apiautomation.pojoclasses;
 
 import java.util.List;
 

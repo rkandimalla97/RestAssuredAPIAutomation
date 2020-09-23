@@ -1,4 +1,4 @@
-package com.pojo.classes;
+package com.apiautomation.pojoclasses;
 
 public class GetCourseDetialsPojo {
 

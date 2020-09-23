@@ -1,6 +1,6 @@
-package com.pojo.classes;
+package com.apiautomation.pojoclasses;
 
-public class ApiPojo {
+public class MobilePojo {
 
 	private String courseTitle;
 	private String price;

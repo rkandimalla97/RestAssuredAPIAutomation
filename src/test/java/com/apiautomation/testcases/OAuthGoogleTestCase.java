@@ -1,4 +1,4 @@
-package com.restassured.testcases;
+package com.apiautomation.testcases;
 
 import static io.restassured.RestAssured.given;
 

@@ -1,9 +1,10 @@
-package com.pojo.classes;
+package com.apiautomation.pojoclasses;
 
-public class MobilePojo {
+public class WebAutomationPojo {
 
 	private String courseTitle;
 	private String price;
+	
 	
 	public String getCourseTitle() {
 		return courseTitle;
@@ -20,7 +21,7 @@ public class MobilePojo {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-
+	
 	
 	
 	
